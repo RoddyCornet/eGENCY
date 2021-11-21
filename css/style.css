@@ -1,0 +1,627 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+/*--------------------*/
+@font-face {
+	font-family: "Muli";
+	src: url("../fonts/Muli.ttf") format("woff"), url("../fonts/Muli-Bold.ttf") format("woff"),
+		url("../fonts/Muli-SemiBold.ttf") format("woff"), url("../fonts/Muli-Light.ttf") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+body {
+	font-family: "Muli-Bold", Arial, sans-serif;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+.container {
+	min-width: 1440px;
+
+}
+.hero {
+	background-color: rgba(255, 165, 2, 0.5);
+	position: relative;
+	height: 100vh;
+}
+.logo {
+	position: absolute;
+	top: 4%;
+	left: 12%;
+}
+.site-menu {
+	display: flex;
+	position: absolute;
+	top: 5%;
+	left: 42%;
+}
+.site-menu__item {
+	margin-right: 32px;
+}
+.site-menu__link {
+	color: #373f41;
+	font-size: 14px;
+}
+.site-menu__link:hover {
+	color: #3c64b1;
+}
+.entrance-button {
+	display: flex;
+	position: absolute;
+	top: 5%;
+	left: 80%;
+}
+.entrance-button__item {
+	margin-right: 3px;
+	font-weight: bold;
+}
+.entrance-button__link {
+	color: #3c64b1;
+	padding: 12px 18px;
+	border-radius: 6px;
+}
+.entrance-button__link:hover {
+	color: #ffffff;
+	background-color: #f73c6b;
+}
+.header__pic {
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+}
+.header__content {
+	max-width: 450px;
+	position: absolute;
+	top: 35%;
+	left: 60%;
+}
+.header__title {
+	font-size: 52px;
+	color: #373f41;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+.header__text {
+	font-size: 16px;
+	color: #737b7d;
+	text-align: justify;
+	line-height: 22px;
+	margin-bottom: 56px;
+	font-family: "Muli-Bold", Arial, sans-serif;
+	letter-spacing: 0.3px;
+}
+.header__button {
+	display: inline-block;
+	font-size: 14px;
+	border: 1px solid #f73c6b;
+	padding: 12px 18px 14px 18px;
+}
+.header__link {
+	color: #f73c6b;
+}
+.massage {
+	position: relative;
+	min-height: 800px;
+}
+.massage__icon {
+	margin-top: 20px;
+}
+.massage-text__item {
+	padding: 35px 30px 39px 30px;
+	margin-bottom: 36px;
+	width: 560px;
+	text-align: left;
+	font-size: 16px;
+	color: #282828;
+	box-shadow: 0 12px 35px 4px rgba(171, 8, 96, 0.05);
+	background-color: #fff;
+	border-radius: 15px;
+	line-height: 1.38;
+	font-family: "Muli", Arial, sans-serif;
+}
+.massage-text__item:hover {
+	background-color: #4f55dd;
+	color: #fff;
+}
+.massage-text li:last-child {
+	margin-bottom: 0;
+}
+.massage-text {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+}
+.massage__pic {
+	position: absolute;
+	bottom: 23%;
+	left: 60%;
+}
+.text {
+	height: 307px;
+	display: flex;
+	justify-content: space-between;
+}
+.text__item {
+	font-size: 44px;
+	color: #4f4f4f;
+	width: 407px;
+	line-height: 56px;
+	font-weight: bold;
+}
+.delivery {
+	position: relative;
+	min-height: 900px;
+	min-width: 1200px;
+}
+.delivery__title {
+	font-weight: bold;
+	font-size: 44px;
+	line-height: 1.27;
+	color: #4f4f4f;
+	display: flex;
+	justify-content: space-around;
+	background-color: rgba(46, 213, 115, 0.5);
+	height: 307px;
+}
+.delivery__line-text {
+	padding: 70px 5px;
+	width: 471px;
+}
+.delivery__pic {
+	position: absolute;
+	top: 3%;
+}
+.delivery__pic--bike {
+	position: absolute;
+	top: -24%;
+	left: 28%;
+}
+.text-space {
+	display: flex;
+	margin-top: 125px;
+	font-family: "Muli", Arial, sans-serif;
+}
+.text-space__item {
+	width: 260px;
+	text-align: left;
+	font-size: 16px;
+	line-height: 23px;
+}
+.text-space__word {
+	margin-top: 10px;
+}
+.text-space li:nth-child(1) {
+	position: absolute;
+	top: 45%;
+	left: 13%;
+}
+.text-space li:nth-child(2) {
+	position: absolute;
+	top: 45%;
+	right: 15%;
+}
+
+.text-line {
+	position: absolute;
+	top: 68%;
+	left: 13%;
+	display: flex;
+	font-family: "Muli", Arial, sans-serif;
+}
+
+.text-line__item {
+	font-size: 16px;
+	width: 255px;
+	text-align: justify;
+	margin-right: 115px;
+	line-height: 23px;
+}
+.text-line__word {
+	margin-top: 10px;
+}
+.scratch {
+	position: relative;
+}
+.scratch__pic {
+	position: absolute;
+	top: -30%;
+	left: 86%;
+}
+.scratch__pic-girls {
+	margin-left: 230px;
+}
+.scratch-text {
+	position: absolute;
+	top: 15%;
+	left: 53%;
+	width: 445px;
+	text-align: justify;
+	font-family: "Muli-Bold", Arial, sans-serif;
+}
+.scratch-text li:nth-child(1) {
+	padding-bottom: 10px;
+	font-size: 23px;
+	font-weight: bold;
+	color: #373f41;
+	line-height: 56px;
+}
+.scratch-text li:nth-child(2) {
+	font-size: 52px;
+	font-weight: bold;
+	color: #373f41;
+	padding-bottom: 30px;
+	line-height: 56px;
+}
+.scratch-text li:nth-child(3) {
+	line-height: 22px;
+	font-size: 16px;
+	color: #737b7d;
+	letter-spacing: 0.2px;
+	font-family: "Muli", Arial, sans-serif;
+}
+.subscribe {
+	margin-top: 110px;
+	background-color: rgba(255, 71, 87, 0.5);
+	height: 450px;
+	position: relative;
+	margin-bottom: 65px;
+}
+.subscribe__pic {
+	position: absolute;
+	top: -58%;
+	left: 15%;
+}
+.form__text {
+	font-size: 40px;
+	font-family: "Muli-Bold", Arial, sans-serif;
+	font-weight: bold;
+	color: #4f4f4f;
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	line-height: 56px;
+}
+.form__group {
+	position: absolute;
+	bottom: 25%;
+	left: 15%;
+	z-index: 2;
+}
+.form__input {
+	font-family: "Muli", Arial, sans-serif;
+	height: 42px;
+	width: 282px;
+	border-radius: 11px;
+	padding-left: 17px;
+	color: #737b7d;
+}
+.form__button {
+	font-size: 14px;
+	font-family: "Muli", Arial, sans-serif;
+	margin-left: 24px;
+	padding: 14px 20px;
+	border-radius: 12px;
+	background-color: #f73c6b;
+	color: #ffffff;
+}
+.design {
+	height: 700px;
+	margin-top: 65px;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+	
+}
+.desing__header {
+	display: flex;
+}
+.design__title {
+	font-family: "Muli-Bold", Arial, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	color: #23242a;
+	width: 600px;
+	line-height: 57px;
+	/*
+	Измененно 
+	*/
+	margin-bottom: 56px;
+	/*
+	position: absolute;
+	top: 3%;
+	left: 18%;
+	*/
+}
+.design__link {
+	font-family: "Muli", Arial, sans-serif;
+	font-size: 21px;
+	font-weight: 600;
+	text-decoration: underline;
+	position: absolute;
+	top: 5%;
+	left: 75%;
+}
+.design__link a {
+	color: #e5e5e5;
+}
+.disign__arrow {
+	position: absolute;
+	top: -10%;
+	right: -25%;
+}
+.team {
+	display: flex;
+	/*  
+	position: absolute;
+	top: 25%;
+	left: 16%;
+	*/
+	margin-bottom: 110px;
+}
+.team__item {
+	width: 370px;
+	margin-right: 35px;
+	box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
+	border-radius: 20px;
+	overflow: hidden;
+}
+.team__title {
+	font-family: "Muli", Arial, sans-serif;
+	font-weight: 600;
+	font-size: 44px;
+	color: #23242a;
+	margin-bottom: 37px;
+	padding: 41px 35px 0px 40px;
+}
+.team__text {
+	font-family: "Muli", Arial, sans-serif;
+	text-align: left;
+	font-size: 16px;
+	color: #23242a;
+	height: 170px;
+	margin-bottom: 40px;
+	padding: 0px 35.3px 0px 40.3px;
+	line-height: 20.8px;
+}
+.team__link {
+	font-family: "Muli", Arial, sans-serif;
+	font-size: 21px;
+	height: 69px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+}
+.team__link a {
+	color: #000000;
+}
+.team__link--yellow {
+	background-color: #ffd281;
+}
+.team__link--green {
+	background-color: rgba(46, 213, 115, 0.5);
+}
+.team__link--pink {
+	background-color: #ffa3ab;
+}
+.footer {
+	min-height: 561px;
+	display: flex;
+	position: relative;
+	background: rgba(46, 213, 115, 0.5);
+}
+.footer__logo {
+	position: absolute;
+	top: 8%;
+	left: 12%;
+}
+.footer__text {
+	font-family: "Muli", Arial, sans-serif;
+	width: 445px;
+	position: absolute;
+	top: 18%;
+	left: 12%;
+	font-size: 16px;
+	line-height: 1.38;
+	text-align: justify;
+	color: #454646;
+}
+.inf--menu {
+	position: absolute;
+	top: 8%;
+	left: 60%;
+}
+.inf--menu__section {
+	display: flex;
+}
+.inf--menu__list {
+	margin-right: 80px;
+}
+.inf--menu__title {
+	font-family: "Muli", Arial, sans-serif;
+	opacity: 0.5;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 38px;
+}
+.inf--menu__link {
+	font-family: "Muli", Arial, sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.35;
+	color: #555;
+}
+.inf--menu__item {
+	padding-bottom: 7px;
+}
+.inf--menu__item:last-child {
+	padding-bottom: 0px;
+}
+.footer__line {
+	height: 2px;
+	background-color: #000000;
+	max-width: 100%;
+	width: 75%;
+	position: absolute;
+	top: 60%;
+	left: 12%;
+}
+.town-menu {
+	position: absolute;
+	top: 54%;
+	left: 61%;
+}
+.town-menu__item {
+	margin-right: 28px;
+}
+.town-menu__row {
+	display: flex;
+}
+.town-menu__link {
+	font-family: "Muli", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+}
+.payment {
+	position: absolute;
+	top: 70%;
+	left: 35%;
+}
+.payment__list {
+	display: flex;
+}
+.payment__item {
+	margin-right: 18px;
+}
+
+.payment__icon {
+	width: 54px;
+	height: 37px;
+}
+.payment__icon--paypal {
+	background: #fff;
+	border-radius: 4px;
+}
+.payment__icon--mastercard {
+	background: #fff;
+	border-radius: 4px;
+}
+.payment__icon--stripe {
+	background: #fff;
+	border-radius: 4px;
+}
+.payment__icon--bitcoin {
+	background: #fff;
+	border-radius: 4px;
+	padding: 2px 3px;
+}
+.payment__icon--bancontact {
+	width: 100%;
+}
+.payment__list li:nth-child(6) {
+	margin-right: 0;
+}
+.footer__pic--wave {
+	position: absolute;
+	top: -12%;
+	left: 88%;
+}
+.footer__pic--ball {
+	position: absolute;
+	top: 59%;
+	left: 1%;
+}
+.footer__pic--spiral {
+	position: absolute;
+	top: 70%;
+	left: 88%;
+}
+.footer__pic--service {
+	position: absolute;
+	top: 87%;
+	left: 80%;
+}
+.footer__rights {
+	font-family: "Muli", Arial, sans-serif;
+	opacity: 0.5;
+	font-size: 18px;
+	line-height: 1.35;
+	color: #494949;
+	position: absolute;
+	top: 86%;
+	left: 12%;
+}
